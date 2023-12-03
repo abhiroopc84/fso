@@ -34,7 +34,8 @@ const App = () => {
 
   const filterByName = (event) => {
     setFilter(event.target.value)
-    setPersonsToShow(persons.filter(person => person.name.toLowerCase().includes(filter.toLowerCase())))
+    const filtervalue = event.target.value
+    setPersonsToShow(persons.filter(person => person.name.toLowerCase().includes(filtervalue.toLowerCase())))
   }
   const addPerson = (event) => {
     event.preventDefault()
